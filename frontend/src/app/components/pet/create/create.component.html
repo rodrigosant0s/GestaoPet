@@ -1,0 +1,57 @@
+<section>
+    <mat-card class="card mat-elevation-z8">
+        <mat-card-title>Registrar Novo Pet</mat-card-title>
+        <div class="Container">
+            <div class="leftContent">
+                <form (keydown)="enterEvent($event)">
+
+                    <mat-form-field>
+                        <input 
+                            matInput 
+                            placeholder="Qual tipo de animal ?" 
+                            name="animal_type" 
+                            maxlength="70" 
+                            #firstInput
+                            [(ngModel)]="pet.animal_type" 
+                            [formControl]="myControl" 
+                            [matAutocomplete]="auto" />
+
+                        <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                {{option}}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+
+                    <mat-form-field #textInput>
+                        <input 
+                            matInput 
+                            placeholder="Qual o nome do Pet ?" 
+                            [(ngModel)]="pet.name" 
+                            name="name" 
+                            maxlength="70"
+                            #secondInput />
+                    </mat-form-field>
+
+                </form>
+
+                <div>
+                    <button mat-raised-button (click)="create()" [disabled]="isDisabled" color="primary">
+                        Registrar
+                    </button>
+                    <button mat-raised-button (click)="cancel()" [disabled]="isDisabled" class="cancel">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+
+            <div class="rightContent">
+                <div>
+                    <img src="../../../../assets/images/img02.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </mat-card>
+
+</section>

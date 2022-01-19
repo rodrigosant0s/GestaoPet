@@ -1,0 +1,71 @@
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .card {
+    width: 70%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+
+    .Container {
+      width: 100%;
+      display: flex;
+
+      .leftContent {
+        width: 50%;
+
+        form {
+          width: 70%;
+          display: flex;
+          height: 300px;
+          flex-direction: column;
+          margin-left: 10px;
+
+          justify-content: center;
+        }
+
+        div {
+          display: flex;
+
+          button {
+            margin: 20px 15px 0px 0px;
+          }
+
+          .cancel {
+            background: #ffffff;
+            margin: 20px 15px 0px 0px;
+            color: #3f51b5;
+            border: solid 0.7px #3f51b5;
+          }
+        }
+      }
+
+      .rightContent {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        div {
+          width: 550px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          background: transparent;
+          position: absolute;
+
+          img {
+            height: 100%;
+            padding-left: 60px;
+            object-fit: fill;
+            width: 450px;
+          }
+        }
+      }
+    }
+  }
+}

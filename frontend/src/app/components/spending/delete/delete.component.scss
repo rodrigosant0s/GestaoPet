@@ -1,0 +1,26 @@
+section {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 70px;
+
+  .card {
+    width: 70%;
+    margin: 0 auto;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+    }
+
+    button {
+      margin: 20px 15px 0px 0px;
+    }
+    .cancel {
+      background: #ffffff;
+      margin: 20px 15px 0px 0px;
+      color: #f44336;
+      border: solid 0.7px #f44336;
+    }
+  }
+}

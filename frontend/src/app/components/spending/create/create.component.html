@@ -1,0 +1,58 @@
+<section>
+  <mat-card class="card">
+    <mat-card-title>Registar Novo Gasto</mat-card-title>
+    <div class="Container">
+      <div class="leftContent">
+        <form>
+          <mat-form-field>
+            <mat-label>Com qual Pet</mat-label>
+            <mat-select [(ngModel)]="outlay.pet" name="pets">
+              <mat-option *ngFor="let pet of pets" [value]="pet">
+                {{pet.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input 
+              matInput 
+              placeholder="Com o que você gastou?" 
+              [(ngModel)]="outlay.title" 
+              maxlength="50" 
+              name="title"
+              maxlength="50" />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input 
+              matInput 
+              placeholder="Quanto você gastou?" 
+              [(ngModel)]="outlay.cost" 
+              maxlength="50" 
+              name="cost"
+              type="number"/>
+          </mat-form-field>
+
+        </form>
+
+        <div>
+          <button mat-raised-button (click)="create()" [disabled]="isDisabled" color="primary">
+            Registrar
+          </button>
+
+          <button mat-raised-button (click)="cancel()" [disabled]="isDisabled" class="cancel">
+            Cancelar
+          </button>
+        </div>
+
+      </div>
+
+      <div class="rightContent">
+        <div>
+          <img src="../../../../assets/images/img1.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+
+  </mat-card>
+</section>

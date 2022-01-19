@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  color: #fff;
+
+
+  .logo {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .routes {
+    display: flex;
+    width: 220px;
+    gap: 20px;
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+  }
+
+}

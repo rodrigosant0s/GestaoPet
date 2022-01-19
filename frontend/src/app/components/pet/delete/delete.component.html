@@ -1,0 +1,32 @@
+<section>
+    <mat-card class="card mat-elevation-z8">
+        <mat-card-title>Excluir Pet</mat-card-title>
+        <form>
+            <mat-form-field>
+                <input 
+                    matInput 
+                    placeholder="Animal" 
+                    [value]="pet.animal_type" 
+                    name="animal_type" 
+                    disabled />
+            </mat-form-field>
+            <mat-form-field>
+                <input 
+                    matInput 
+                    placeholder="Nome" 
+                    [value]="pet.name" 
+                    name="name" 
+                    disabled />
+            </mat-form-field>
+        </form>
+
+        <button mat-raised-button (click)="delete()" [disabled]="isDisabled" color="warn">
+            Excluir
+        </button>
+        <button mat-raised-button (click)="cancel()" [disabled]="isDisabled" class="cancel">
+            Cancelar
+        </button>
+
+    </mat-card>
+
+</section>

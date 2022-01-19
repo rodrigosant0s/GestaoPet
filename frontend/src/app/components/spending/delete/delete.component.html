@@ -1,0 +1,33 @@
+<section>
+  <mat-card class="card mat-elevation-z8">
+      <mat-card-title>Excluir Gasto</mat-card-title>
+      <form>
+          <mat-form-field>
+              <input 
+                matInput 
+                placeholder="Título" 
+                [value]="outlay.title" 
+                name="title" 
+                disabled />
+          </mat-form-field>
+
+          <mat-form-field>
+              <input 
+                matInput 
+                placeholder="Custo (R$)" 
+                [value]="outlay.cost" 
+                name="cost" 
+                disabled />
+          </mat-form-field>
+
+      </form>
+
+      <button mat-raised-button (click)="delete()" [disabled]="isDisabled" color="warn">
+          Excluir
+      </button>
+      <button mat-raised-button (click)="cancel()" [disabled]="isDisabled" class="cancel">
+          Cancelar
+      </button>
+      
+  </mat-card>
+</section>

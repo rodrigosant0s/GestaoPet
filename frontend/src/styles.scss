@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; background: rgb(245, 245, 245); }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+
+.green-snackbar {
+    background: #7d6ecc;
+    color: #f5f7f6;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+.green-snackbar button {
+    background-color: #7d6ecc;
+    color: white;
+    border: none;
+}
+.red-snackbar {
+    background: #F44336;
+    color: white;
+}
+.red-snackbar button {
+    background-color: #F44336;
+    color: white;
+    border: none;
+}

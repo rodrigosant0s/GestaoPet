@@ -1,0 +1,53 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    padding-bottom: 100px;
+    height: 100vh;
+
+    div {
+        width: 100%;
+
+        h2 {
+            text-align: center;
+            font-size: 27px;
+        }
+
+        div {
+            display: flex;
+            width: 90%;
+            margin: 0 auto;
+            justify-content: end;
+            align-items: center;
+            height: 30px;
+            color: #0380f5;
+
+            a {
+                color: #0380f5;
+                font-size: 20px;
+                text-decoration: none;
+                font-weight: 700;
+                margin-right: 3px;
+            }
+        }
+    }
+
+    table {
+        width: 90%;
+        margin: 0 auto;
+
+        td {
+            width: 25%;
+        }
+
+        .edit > i {
+            color: #e4aa0a;
+        }
+
+        .delete > i {
+            color: #e35e6b;
+        }
+    }
+}
